@@ -5,10 +5,12 @@
 It is a single-phase AC power meter, which through a TTL interface allows the reading of:
 - Consumption (A)
 - Voltage (V)
+- Power (W)
 - Frequency (Hz)
 - Power factor
+- Accumulated demand (Wh)
 
-It also allows to set an alarm when a certain demand is reached, as well as to store the demand (Wh) and to reset it.
+It also allows to set an alarm when a certain demand is reached, as well as to store the demand and to reset it.
 
 There are two variants: 
 - PZEM-004T-10A: measuring range 10A 
