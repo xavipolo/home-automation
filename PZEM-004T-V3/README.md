@@ -50,7 +50,7 @@ The console will print out standard readings every 5 seconds:
     gett_power_wu() [10.6, 'W']
     get_energy_wu() [33, 'Wh']
     get_frequency_wu() [50.0, 'Hz']
-    get_power_wu_factor() [0.27, '']
+    get_power_factor_wu() [0.27, '']
     get_alarm_status() False
 
 Code is commented
