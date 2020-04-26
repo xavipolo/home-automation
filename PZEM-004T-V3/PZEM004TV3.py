@@ -78,6 +78,8 @@ class PZEM004TV3( minimalmodbus.Instrument ):
     def calibrate(self):
         """Calibrate.
         There is no info about process
+        
+        NOT TESTED !!
                 
         Message:
         * Slave address? 
@@ -154,7 +156,13 @@ class PZEM004TV3( minimalmodbus.Instrument ):
         return [self.get_power_factor(), ''] 
     
     def test(self, wait_seconds = 5, alarm_value = None, reset_energy = False):
-        
+        """ Test the device on an infinite loop, writting in console the read measurements.
+            
+            Args:
+            * wait_seconds (int): Number of seconds to wait until next loop occurs
+            * alarm_value (int): Set the alarm threshold (in Watts) at the beginning of the test
+            * reset_energy (bol): True to send a reset energy command at the beginning of the test
+        """
         try:
             if (alarm_value != None):
                 self.set_alarm(alarm_value)
@@ -167,17 +175,18 @@ class PZEM004TV3( minimalmodbus.Instrument ):
            
 
         while True:
-            
+
             try:
-                print("get_voltage_wu()", mydev.get_voltage_wu())
-                print("get_current_wu()", mydev.get_current_wu())
-                print("get_power_wu()", mydev.get_power_wu())
-                print("mydev.get_energy_wu", mydev.get_energy_wu())
-                print("mydev.get_frequency_wu", mydev.get_frequency_wu())
-                print("mydev.get_power_factor_wu", mydev.get_power_factor_wu())
-                print("get_alarm_status()", mydev.get_alarm_status())
+                print("get_voltage_wu()", self.get_voltage_wu())
+                print("get_current_wu()", self.get_current_wu())
+                print("get_power_wu()", self.get_power_wu())
+                print("get_energy_wu()", self.get_energy_wu())
+                print("get_frequency_wu()", self.get_frequency_wu())
+                print("get_power_factor_wu()", self.get_power_factor_wu())
+                print("get_alarm_status()", self.get_alarm_status())
 
                 time.sleep(wait_seconds)
 
             except IOError:
                 print("Failed to read from instrument")    
+
