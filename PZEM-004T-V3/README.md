@@ -17,7 +17,7 @@ There are two variants:
 - PZEM-004T-100A: measuring range 100 A 
 
 
-#Installation requierements
+# Installation requierements
 
 - Python (tested with Python 3.7.4 64 bits windows 10) 
 - Install minimalmodbus library (tested with 1.0.2)
