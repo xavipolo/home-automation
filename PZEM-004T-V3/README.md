@@ -17,9 +17,17 @@ There are two variants:
 - PZEM-004T-100A: measuring range 100 A 
 
 
+#Installation requierements
+
+- Python (tested with Python 3.7.4 64 bits windows 10) 
+- Install minimalmodbus library (tested with 1.0.2)
+    
+    pip3 -U install minimalmodbus
+    
+
 # Usage
 
-This python class allow to control the device. It was tested with Python 3.7.4 64 bits (windows 10)
+This python class allow to control the device.
 
 Find the COM port where your PZEM-004T v3 device is connected
 
@@ -38,4 +46,4 @@ The console will print out standard readings every 5 seconds:
     get_power_wu_factor() [0.27, '']
     get_alarm_status() False
 
-
+Code is commented
