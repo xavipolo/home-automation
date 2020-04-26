@@ -17,23 +17,30 @@ There are two variants:
 - PZEM-004T-100A: measuring range 100 A 
 
 
-# Installation requierements
+### Installation requierements
 
 - Python (tested with Python 3.7.4 64 bits windows 10) 
 - Install minimalmodbus library (tested with 1.0.2)
     
-    pip3 -U install minimalmodbus
-    
+    pip3 install -U minimalmodbus
 
-# Usage
+Copy PZEM004TV3.py to your python project.
+
+
+### Usage
 
 This python class allow to control the device.
 
 Find the COM port where your PZEM-004T v3 device is connected
 
-Create an instance and test it by calling the test function.
+Create an instance specifying the port, the slave address (default 1) and whether you want to activate debugging (which will generate traces of the input/output communications)
+
+    from PZEM004TV3 import PZEM004TV3
 
     mydev = PZEM004TV3('COM7', 1, False)
+   
+Call methods or try it calling test method.
+
     mydev.test()
 
 The console will print out standard readings every 5 seconds: 
