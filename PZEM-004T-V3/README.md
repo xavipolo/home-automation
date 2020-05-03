@@ -1,8 +1,8 @@
 # Introduction
 
-## ZEM-004T Version 3.0 TTL Modbus RTU
+## PZEM-004T Version 3.0 TTL Modbus RTU
 
-It is a single-phase AC power meter, which through a TTL interface allows the reading of:
+It's a single-phase AC power meter, which through a TTL interface (modbus) allows the reading of:
 - Consumption (A)
 - Voltage (V)
 - Power (W)
