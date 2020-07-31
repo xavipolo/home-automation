@@ -77,12 +77,12 @@ class PZEM004TV3( minimalmodbus.Instrument ):
     
     def calibrate(self):
         """Calibrate.
-        There is no info about process
+        There is no info about this process
         
         NOT TESTED !!
                 
         Message:
-        * Slave address? 
+        * 0xF8 Broadcast address
         * 0x41 Function code
         * 0x37 Register Address High Byte
         * 0x21 Register Address Low Byte
